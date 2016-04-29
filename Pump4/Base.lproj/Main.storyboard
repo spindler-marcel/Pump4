@@ -16,11 +16,71 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5H3-Pb-gfx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="308"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="9oz-H9-F8T"/>
+                                    <constraint firstAttribute="height" constant="308" id="UDn-JN-AU2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LON-87-Ghn">
+                                <rect key="frame" x="0.0" y="299" width="600" height="301"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="88B-Y4-xvM"/>
+                                    <constraint firstAttribute="width" constant="600" id="caC-33-r7B"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Start Training " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBI-CB-JjP">
+                                <rect key="frame" x="205" y="135" width="191" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ji9-v8-QmO"/>
+                                    <constraint firstAttribute="width" constant="191" id="u6C-o4-ufp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Start Running " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znc-2k-jDg">
+                                <rect key="frame" x="205" y="431" width="191" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Tzv-VS-mCn"/>
+                                    <constraint firstAttribute="width" constant="191" id="XgA-rd-FOo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LON-87-Ghn" secondAttribute="bottom" id="3Fz-9T-OVO"/>
+                            <constraint firstItem="LON-87-Ghn" firstAttribute="top" secondItem="5H3-Pb-gfx" secondAttribute="bottom" constant="-9" id="6GG-xt-7iV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="znc-2k-jDg" secondAttribute="bottom" constant="125" id="8KJ-Tg-vny"/>
+                            <constraint firstItem="XBI-CB-JjP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="115" id="A4g-Tk-e2J"/>
+                            <constraint firstAttribute="trailing" secondItem="5H3-Pb-gfx" secondAttribute="trailing" id="ENh-hC-QCd"/>
+                            <constraint firstItem="5H3-Pb-gfx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KAx-Qi-PqG"/>
+                            <constraint firstItem="LON-87-Ghn" firstAttribute="top" secondItem="5H3-Pb-gfx" secondAttribute="bottom" constant="-9" id="KFn-2U-rJd"/>
+                            <constraint firstItem="5H3-Pb-gfx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MGU-ts-aJh"/>
+                            <constraint firstItem="znc-2k-jDg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sl3-nr-ynt"/>
+                            <constraint firstItem="XBI-CB-JjP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XgH-Cn-GMT"/>
+                            <constraint firstAttribute="trailing" secondItem="LON-87-Ghn" secondAttribute="trailing" id="cub-2r-Oce"/>
+                            <constraint firstItem="LON-87-Ghn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hAg-0M-CEF"/>
+                            <constraint firstItem="LON-87-Ghn" firstAttribute="top" secondItem="5H3-Pb-gfx" secondAttribute="bottom" constant="-9" id="ki4-NX-rsQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startRunningButtonOutlet" destination="LON-87-Ghn" id="Ts8-Sn-w8X"/>
+                        <outlet property="startRunningLabel" destination="znc-2k-jDg" id="d5O-Iz-6C8"/>
+                        <outlet property="startTrainingButtonOutlet" destination="5H3-Pb-gfx" id="mTx-du-zDs"/>
+                        <outlet property="startTrainingLabel" destination="XBI-CB-JjP" id="hMH-vn-rTS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="305"/>
         </scene>
     </scenes>
 </document>
