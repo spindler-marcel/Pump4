@@ -96,7 +96,44 @@
                     <view key="view" contentMode="scaleToFill" id="IQp-h9-dXj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KM6-CJ-ici">
+                                <rect key="frame" x="189" y="72" width="222" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="222" id="Mfl-TY-xFO"/>
+                                    <constraint firstAttribute="height" constant="37" id="fZu-3G-C1r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Training starten"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQk-kA-11V">
+                                <rect key="frame" x="189" y="269" width="222" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="222" id="KVC-WK-QpU"/>
+                                    <constraint firstAttribute="height" constant="47" id="rLM-sz-nuZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Trainingspläne"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ism-eF-nXB">
+                                <rect key="frame" x="189" y="476" width="222" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="222" id="Cmx-4K-KBV"/>
+                                    <constraint firstAttribute="height" constant="47" id="Lks-cm-89Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Übungen"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ism-eF-nXB" firstAttribute="centerX" secondItem="IQp-h9-dXj" secondAttribute="centerX" id="Tkw-Gi-gOD"/>
+                            <constraint firstItem="nQk-kA-11V" firstAttribute="top" secondItem="KM6-CJ-ici" secondAttribute="bottom" constant="160" id="jZj-t5-yD7"/>
+                            <constraint firstItem="KM6-CJ-ici" firstAttribute="centerX" secondItem="IQp-h9-dXj" secondAttribute="centerX" id="rPm-vg-2ZJ"/>
+                            <constraint firstItem="Ism-eF-nXB" firstAttribute="top" secondItem="nQk-kA-11V" secondAttribute="bottom" constant="160" id="ruQ-8Y-wez"/>
+                            <constraint firstItem="KM6-CJ-ici" firstAttribute="top" secondItem="sJA-Pa-iiF" secondAttribute="bottom" constant="8" id="tde-M3-bY2"/>
+                            <constraint firstItem="nQk-kA-11V" firstAttribute="centerX" secondItem="IQp-h9-dXj" secondAttribute="centerX" id="xb1-yV-3he"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RNT-WM-7bz">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="307-6m-LM8">
