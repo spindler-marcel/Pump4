@@ -24,6 +24,9 @@
                                     <constraint firstAttribute="height" constant="308" id="UDn-JN-AU2"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="I46-Qi-Ncd" kind="show" id="3bP-tu-rK2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LON-87-Ghn">
                                 <rect key="frame" x="0.0" y="299" width="600" height="301"/>
@@ -81,6 +84,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="305"/>
+        </scene>
+        <!--Training Auswahl View Controller-->
+        <scene sceneID="rXb-DJ-hyQ">
+            <objects>
+                <viewController id="vW6-LZ-JMg" customClass="TrainingAuswahlViewController" customModule="Pump4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sJA-Pa-iiF"/>
+                        <viewControllerLayoutGuide type="bottom" id="twq-5D-rFp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IQp-h9-dXj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RNT-WM-7bz">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="307-6m-LM8">
+                            <connections>
+                                <action selector="backButtonAction:" destination="vW6-LZ-JMg" id="0Ka-hQ-LbN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a02-ZX-5qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1619" y="305"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2QT-5Z-r13">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I46-Qi-Ncd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JU2-5G-mHN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vW6-LZ-JMg" kind="relationship" relationship="rootViewController" id="O98-wt-yEm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9q-H5-6lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="305"/>
         </scene>
     </scenes>
 </document>
