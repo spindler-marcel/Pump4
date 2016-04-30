@@ -16,6 +16,7 @@ class TrainingsplanAnlegenViewController: UIViewController {
     @IBAction func weiterButtonAction(sender: UIButton) {
         if planNameTextField.text!.isEmpty {
             fehlerLabel.hidden = false
+            
         }
         else{
             
@@ -28,4 +29,13 @@ class TrainingsplanAnlegenViewController: UIViewController {
         
         fehlerLabel.hidden = true
     }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "neuerPlan"{
+            if planNameTextField.text!.isEmpty == true{
+                return false
+            }
+    }
+        return true
+}
 }

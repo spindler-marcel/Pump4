@@ -48,8 +48,13 @@ class UebungenAnzeigenViewController: UIViewController, UITableViewDelegate, UIT
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
             let uebungen = self.uebungen[indexPath.row]
             let cell = tableView.cellForRowAtIndexPath(indexPath)
-            uebungen.ausgewaehlt?.boolValue() = !uebungen.ausgewaehlt?.boolValue()
-            if uebungen.ausgewaehlt{
+            if uebungen.ausgewaehlt?.boolValue == true{
+                uebungen.ausgewaehlt?.boolValue == false
+            }
+            else{
+                uebungen.ausgewaehlt?.boolValue == true
+            }
+            if uebungen.ausgewaehlt?.boolValue == true{
                 cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
             }
             else{
@@ -72,7 +77,6 @@ class UebungenAnzeigenViewController: UIViewController, UITableViewDelegate, UIT
     func setupTableView(){
         if uebungForPlan{
             hinzufuegenButtonOutlet.title = "Zu Plan hinzufügen"
-            
             
         }
     }
