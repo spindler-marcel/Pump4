@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="1619" y="305"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Uebungen Muskelgruppen Table View Controller-->
         <scene sceneID="zpj-vU-Jz0">
             <objects>
-                <tableViewController id="2qa-WI-Yjo" sceneMemberID="viewController">
+                <tableViewController id="2qa-WI-Yjo" customClass="UebungenMuskelgruppenTableViewController" customModule="Pump4" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DbL-Ox-MTl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,6 +176,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TIx-YN-0TV" kind="show" identifier="Brust" id="yrD-UH-liz"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="70" id="dDv-Zw-Lu8">
                                         <rect key="frame" x="0.0" y="134" width="600" height="70"/>
@@ -192,6 +195,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TIx-YN-0TV" kind="show" identifier="Rücken" id="2ag-ce-tcN"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="70" id="lxC-Dl-b4S">
                                         <rect key="frame" x="0.0" y="204" width="600" height="70"/>
@@ -208,6 +214,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TIx-YN-0TV" kind="show" identifier="Beine" id="f5m-Wq-H0H"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="70" id="cBC-bG-Yxb">
                                         <rect key="frame" x="0.0" y="274" width="600" height="70"/>
@@ -224,6 +233,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TIx-YN-0TV" kind="show" identifier="Schultern" id="J4L-vM-j7h"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="70" id="wDN-5A-G1y">
                                         <rect key="frame" x="0.0" y="344" width="600" height="70"/>
@@ -240,6 +252,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TIx-YN-0TV" kind="show" identifier="Bizeps" id="2F9-BV-0be"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="70" id="o5V-vR-Awu">
                                         <rect key="frame" x="0.0" y="414" width="600" height="70"/>
@@ -256,6 +271,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TIx-YN-0TV" kind="show" identifier="Trizeps" id="M0i-Aa-j6e"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="70" id="jET-EF-4F6">
                                         <rect key="frame" x="0.0" y="484" width="600" height="70"/>
@@ -272,6 +290,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TIx-YN-0TV" kind="show" identifier="Nacken" id="079-Zz-d0B"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="70" id="O4b-fc-vIY">
                                         <rect key="frame" x="0.0" y="554" width="600" height="70"/>
@@ -288,6 +309,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="TIx-YN-0TV" kind="show" identifier="Unterarme" id="bYq-Zg-Ga0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -301,6 +325,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXj-iO-1HH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1619" y="1025"/>
+        </scene>
+        <!--Uebungen Anzeigen View Controller-->
+        <scene sceneID="YjU-X8-1uX">
+            <objects>
+                <viewController id="TIx-YN-0TV" customClass="UebungenAnzeigenViewController" customModule="Pump4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cNL-Qx-ViD"/>
+                        <viewControllerLayoutGuide type="bottom" id="5v6-0R-p6z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3n9-Cs-LoH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jHS-9W-yLE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="GOQ-gk-g8n"/>
+                                    <constraint firstAttribute="height" constant="600" id="nNN-8q-CA5"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jHS-9W-yLE" firstAttribute="leading" secondItem="3n9-Cs-LoH" secondAttribute="leading" id="90q-ab-bal"/>
+                            <constraint firstItem="jHS-9W-yLE" firstAttribute="top" secondItem="3n9-Cs-LoH" secondAttribute="top" id="Nff-yk-DkY"/>
+                            <constraint firstAttribute="trailing" secondItem="jHS-9W-yLE" secondAttribute="trailing" id="hMN-VE-qDE"/>
+                            <constraint firstItem="5v6-0R-p6z" firstAttribute="top" secondItem="jHS-9W-yLE" secondAttribute="bottom" id="vNA-w9-oMY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycL-3a-tmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2469" y="1025"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2QT-5Z-r13">
@@ -321,4 +379,7 @@
             <point key="canvasLocation" x="941" y="305"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bYq-Zg-Ga0"/>
+    </inferredMetricsTieBreakers>
 </document>
