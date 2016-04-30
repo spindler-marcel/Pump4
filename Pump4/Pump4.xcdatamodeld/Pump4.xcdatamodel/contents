@@ -1,4 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Satz" syncable="YES">
+        <attribute name="ausgewaehlt" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="rpe" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="wiederholungen" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="uebung" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Uebung" inverseName="saetze" inverseEntity="Uebung" syncable="YES"/>
+    </entity>
+    <entity name="Session" syncable="YES">
+        <attribute name="datum" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dauer" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="erledigt" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="trainingsplan" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Trainingsplan" inverseName="session" inverseEntity="Trainingsplan" syncable="YES"/>
+    </entity>
+    <entity name="Trainingsplan" syncable="YES">
+        <attribute name="ausgewaehlt" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="trainingsplan" inverseEntity="Session" syncable="YES"/>
+        <relationship name="uebungen" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Uebung" inverseName="trainingsplan" inverseEntity="Uebung" syncable="YES"/>
+    </entity>
+    <entity name="Uebung" syncable="YES">
+        <attribute name="ausgewaehlt" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="muskel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="saetze" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Satz" inverseName="uebung" inverseEntity="Satz" syncable="YES"/>
+        <relationship name="trainingsplan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trainingsplan" inverseName="uebungen" inverseEntity="Trainingsplan" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Session" positionX="-261" positionY="-117" width="128" height="105"/>
+        <element name="Trainingsplan" positionX="-9" positionY="-141" width="128" height="105"/>
+        <element name="Uebung" positionX="-36" positionY="36" width="128" height="120"/>
+        <element name="Satz" positionX="-243" positionY="72" width="128" height="105"/>
+    </elements>
 </model>
