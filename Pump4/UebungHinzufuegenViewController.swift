@@ -1,5 +1,5 @@
 //
-//  UebungenMuskelgruppenTableViewController.swift
+//  UebungHinzufuegenViewController.swift
 //  Pump4
 //
 //  Created by Marcel Spindler on 30.04.16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UebungenMuskelgruppenTableViewController: UITableViewController {
+class UebungHinzufuegenViewController: UIViewController {
 
-   
+
 }
