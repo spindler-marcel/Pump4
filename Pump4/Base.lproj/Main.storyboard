@@ -114,6 +114,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                                 <state key="normal" title="Trainingspläne"/>
+                                <connections>
+                                    <segue destination="gu8-Ru-PIB" kind="show" id="pPx-wM-GpU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ism-eF-nXB">
                                 <rect key="frame" x="189" y="476" width="222" height="47"/>
@@ -149,6 +152,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a02-ZX-5qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1619" y="305"/>
+        </scene>
+        <!--Trainingsplan Menu View Controller-->
+        <scene sceneID="GJa-Ne-lMQ">
+            <objects>
+                <viewController id="gu8-Ru-PIB" customClass="TrainingsplanMenuViewController" customModule="Pump4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c6K-Nd-FL2"/>
+                        <viewControllerLayoutGuide type="bottom" id="HJS-is-KaH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6AK-JC-aNd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jla-AX-LTO">
+                                <rect key="frame" x="174" y="402" width="252" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="3hY-zU-R5T"/>
+                                    <constraint firstAttribute="height" constant="49" id="ZEP-Qo-5FL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Neuen Plan erstellen"/>
+                                <connections>
+                                    <segue destination="KSV-Xz-ylr" kind="show" id="1F8-vZ-1DB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9E-E7-H9N">
+                                <rect key="frame" x="207" y="148" width="186" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="hOh-DH-5GI"/>
+                                    <constraint firstAttribute="width" constant="186" id="zRd-pr-fvH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Pläne anzeigen"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l9E-E7-H9N" firstAttribute="top" secondItem="c6K-Nd-FL2" secondAttribute="bottom" constant="84" id="9NE-bz-rUd"/>
+                            <constraint firstItem="l9E-E7-H9N" firstAttribute="centerX" secondItem="6AK-JC-aNd" secondAttribute="centerX" id="X1O-SY-pIb"/>
+                            <constraint firstItem="jla-AX-LTO" firstAttribute="top" secondItem="l9E-E7-H9N" secondAttribute="bottom" constant="205" id="euu-Jz-tId"/>
+                            <constraint firstItem="jla-AX-LTO" firstAttribute="centerX" secondItem="6AK-JC-aNd" secondAttribute="centerX" id="tre-Qi-0rv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fzi-ML-ohb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2301" y="305"/>
+        </scene>
+        <!--Trainingsplan Anlegen View Controller-->
+        <scene sceneID="iub-fp-QgY">
+            <objects>
+                <viewController id="KSV-Xz-ylr" customClass="TrainingsplanAnlegenViewController" customModule="Pump4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LFd-eO-CvZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Ym-iv-pY0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9CD-lh-ixj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name des Plans:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLw-nX-e4c">
+                                <rect key="frame" x="204" y="72" width="193" height="35"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIj-aN-RZe">
+                                <rect key="frame" x="188" y="109" width="224" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfg-2i-xJb">
+                                <rect key="frame" x="255" y="510" width="91" height="40"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Weiter"/>
+                                <connections>
+                                    <action selector="weiterButtonAction:" destination="KSV-Xz-ylr" eventType="touchUpInside" id="j2o-hZ-PCl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Namen angeben!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GI9-wn-s7h">
+                                <rect key="frame" x="198" y="282" width="205" height="35"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="fehlerLabel" destination="GI9-wn-s7h" id="10g-5b-uTM"/>
+                        <outlet property="planNameTextField" destination="NIj-aN-RZe" id="U1a-M9-Zdp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1z-Zf-pSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2979" y="305"/>
         </scene>
         <!--Uebungen Muskelgruppen Table View Controller-->
         <scene sceneID="zpj-vU-Jz0">
@@ -387,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycL-3a-tmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2469" y="1025"/>
+            <point key="canvasLocation" x="2301" y="1025"/>
         </scene>
         <!--Uebung Hinzufuegen View Controller-->
         <scene sceneID="ANM-SK-4qa">
@@ -476,7 +575,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYN-nh-ZPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3171" y="1025"/>
+            <point key="canvasLocation" x="2979" y="1025"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2QT-5Z-r13">
