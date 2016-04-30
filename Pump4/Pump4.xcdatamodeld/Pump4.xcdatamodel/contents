@@ -10,7 +10,7 @@
         <attribute name="datum" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="dauer" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="erledigt" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <relationship name="trainingsplan" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Trainingsplan" inverseName="session" inverseEntity="Trainingsplan" syncable="YES"/>
+        <relationship name="trainingsplan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trainingsplan" inverseName="session" inverseEntity="Trainingsplan" syncable="YES"/>
     </entity>
     <entity name="Trainingsplan" representedClassName="Trainingsplan" syncable="YES">
         <attribute name="ausgewaehlt" optional="YES" attributeType="Boolean" syncable="YES"/>

@@ -366,6 +366,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="TIx-YN-0TV" id="HZw-KH-un7"/>
+                                    <outlet property="delegate" destination="TIx-YN-0TV" id="z3q-un-AbV"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -376,15 +380,19 @@
                             <constraint firstItem="5v6-0R-p6z" firstAttribute="top" secondItem="jHS-9W-yLE" secondAttribute="bottom" id="vNA-w9-oMY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hinzufuegenButtonOutlet" destination="GcK-xI-Uzd" id="Ynf-AQ-57M"/>
+                        <outlet property="tableView" destination="jHS-9W-yLE" id="adq-vL-mFC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycL-3a-tmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2469" y="1025"/>
         </scene>
-        <!--View Controller-->
+        <!--Uebung Hinzufuegen View Controller-->
         <scene sceneID="ANM-SK-4qa">
             <objects>
-                <viewController id="lKz-ad-dVg" sceneMemberID="viewController">
+                <viewController id="lKz-ad-dVg" customClass="UebungHinzufuegenViewController" customModule="Pump4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Ov-GF-NgA"/>
                         <viewControllerLayoutGuide type="bottom" id="gqn-61-Unp"/>
@@ -428,6 +436,10 @@
                                     <constraint firstAttribute="height" constant="291" id="m2a-ll-yEU"/>
                                     <constraint firstAttribute="width" constant="600" id="p1q-i5-Jtf"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="lKz-ad-dVg" id="upZ-lt-7Ak"/>
+                                    <outlet property="delegate" destination="lKz-ad-dVg" id="DCX-Go-1aC"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQB-kW-lIS">
                                 <rect key="frame" x="201" y="550" width="199" height="30"/>
@@ -437,6 +449,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="Übung hinzufügen"/>
+                                <connections>
+                                    <action selector="uebungHinzufuegenButtonAction:" destination="lKz-ad-dVg" eventType="touchUpInside" id="fGX-sj-IjD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -453,6 +468,11 @@
                             <constraint firstItem="JGD-4h-bj4" firstAttribute="top" secondItem="iio-o1-YYm" secondAttribute="bottom" constant="22" id="pRR-D6-BQH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fehlerLabel" destination="iio-o1-YYm" id="bfO-uz-QaQ"/>
+                        <outlet property="pickerView" destination="JGD-4h-bj4" id="sP3-RO-RFX"/>
+                        <outlet property="uebungNameTextField" destination="ZTP-yV-FxJ" id="E6I-36-BKk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYN-nh-ZPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
